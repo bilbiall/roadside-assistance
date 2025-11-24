@@ -17,24 +17,24 @@ export default function CTABanner() {
         />
       </div>
 
-      <div className="max-w-4xl mx-auto relative z-10 text-center">
-        <div className="flex items-center justify-center gap-2 mb-6 text-accent font-bold text-lg">
+      <div className="max-w-4xl mx-auto relative z-10 text-center animate-fade-in">
+        <div className="flex items-center justify-center gap-2 mb-6 text-accent font-semibold text-sm">
           <AlertCircle className="w-6 h-6 animate-emergency" />
           IN AN EMERGENCY?
         </div>
 
-        <h2 className="text-5xl md:text-6xl font-black mb-6 text-primary-foreground">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
           Stranded? Don't Panic — Help Is Just a Call Away.
         </h2>
 
-        <p className="text-2xl text-primary-foreground/90 mb-8 font-semibold">
+        <p className="text-lg text-primary-foreground/90 mb-8 font-medium">
           24/7 Emergency Line: <span className="text-accent">0700 123 456</span>
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
           <Button
             size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg font-bold rounded-full px-8 py-6 h-auto"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold rounded-full px-8 py-4 h-auto transition-all hover:scale-105"
           >
             <Phone className="w-5 h-5 mr-2" />
             Get Immediate Help
@@ -42,9 +42,9 @@ export default function CTABanner() {
           <Button
             size="lg"
             variant="outline"
-            className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-lg font-bold rounded-full px-8 py-6 h-auto bg-transparent"
+            className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-base font-semibold rounded-full px-8 py-4 h-auto bg-transparent transition-all hover:scale-105"
           >
-            WhatsApp: +1 (555) 123-4567
+            WhatsApp: +254 740 194 858
           </Button>
         </div>
       </div>

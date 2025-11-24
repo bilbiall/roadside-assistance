@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "RapidRoad Rescue - 24/7 Roadside Assistance",
+  title: "LOBS Roadside - 24/7 Roadside Assistance",
   description:
     "Fast, reliable, affordable roadside assistance. Towing, flat tires, battery jump-starts, fuel delivery, and emergency rescue available anytime, anywhere.",
   generator: "v0.app",

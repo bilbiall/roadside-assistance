@@ -25,7 +25,7 @@ export default function CoverageSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {[
-            { region: "Highway Network", coverage: "500+ miles" },
+            { region: "Highway Network", coverage: "800+ km" },
             { region: "Urban Coverage", coverage: "15+ cities" },
             { region: "Remote Areas", coverage: "24/7 access" },
           ].map((item, i) => (

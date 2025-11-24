@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* <CHANGE> Updated theme for RapidRoad Rescue emergency roadside service */
+  /* Updated theme for RapidRoad Rescue emergency roadside service */
   --background: oklch(0.98 0.01 70);
   --foreground: oklch(0.1 0.05 250);
   --card: oklch(1 0 0);
@@ -136,7 +136,7 @@
   }
 }
 
-/* <CHANGE> Custom animations for emergency feel */
+/* Custom animations for emergency feel */
 @keyframes pulse-emergency {
   0%,
   100% {
@@ -164,4 +164,77 @@
 
 .animate-slide-up {
   animation: slide-up 0.6s ease-out forwards;
+}
+
+/* Added modern animations for contemporary feel */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out;
 }

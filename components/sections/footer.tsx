@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-black mb-4 text-accent">RapidRoad Rescue</h3>
+            <h3 className="text-2xl font-black mb-4 text-accent">LOBS Roadside</h3>
             <p className="text-primary-foreground/80 text-sm">
               Your trusted partner for 24/7 roadside assistance and emergency rescue services.
             </p>
@@ -53,15 +53,17 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex gap-2 text-primary-foreground/80 hover:text-accent transition">
                 <Phone className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                24/7 Hotline: 0700 123 456
+                <a href="tel:+254740194858">24/7 Hotline: 0740 194 858</a>
               </li>
               <li className="flex gap-2 text-primary-foreground/80 hover:text-accent transition">
                 <MessageCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                WhatsApp: +1 (555) 123-4567
+                <a href="https://wa.me/254740194858" target="_blank" rel="noopener noreferrer">
+                  WhatsApp: 0740 194 858
+                </a>
               </li>
               <li className="flex gap-2 text-primary-foreground/80 hover:text-accent transition">
                 <Mail className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                support@rapidroad.com
+                support@lobsroadside.com
               </li>
             </ul>
           </div>
@@ -81,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/70">
-          <p>&copy; 2025 RapidRoad Rescue. All rights reserved. | Emergency Line: 0700 123 456</p>
+          <p>&copy; 2025 LOBS Roadside. All rights reserved. | Emergency Line: 0740 194 858</p>
         </div>
       </div>
     </footer>

@@ -51,7 +51,7 @@ export default function NairobiMap() {
           }),
         })
           .addTo(map.current)
-          .bindPopup("RapidRoad Rescue - Nairobi Service Center")
+          .bindPopup("LOBS Roadside - Nairobi Service Center")
       }
     }
 
