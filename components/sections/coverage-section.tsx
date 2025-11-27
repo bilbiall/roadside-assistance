@@ -1,40 +1,80 @@
 "use client"
 
-import { MapPin } from "lucide-react"
+import { MapPin, CheckCircle2 } from "lucide-react"
 import dynamic from "next/dynamic"
 
 const NairobiMap = dynamic(() => import("@/components/nairobi-map"), {
   ssr: false,
-  loading: () => <div className="w-full h-96 bg-muted flex items-center justify-center">Loading map...</div>,
+  loading: () => (
+    <div className="w-full h-full bg-muted/50 flex items-center justify-center rounded-2xl">
+      <div className="animate-pulse text-muted-foreground">Loading map...</div>
+    </div>
+  ),
 })
 
 export default function CoverageSection() {
+  const coverageAreas = [
+    "Nairobi CBD",
+    "Westlands",
+    "Karen",
+    "Langata",
+    "Eastleigh",
+    "Thika Road",
+    "Mombasa Road",
+    "Ngong Road",
+  ]
+
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/10 to-muted/20">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-black mb-4 text-foreground">We've Got You Covered</h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Serving highways, towns, and remote areas across Nairobi — we reach you wherever you are
-          </p>
-        </div>
+    <section className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div>
+            <span className="text-accent font-medium text-sm tracking-wider uppercase mb-4 block">Coverage Area</span>
+            <h2 className="text-3xl lg:text-4xl font-semibold mb-6 text-foreground leading-tight">
+              We've Got Nairobi Covered
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Serving highways, towns, and remote areas across Nairobi and surrounding regions. We reach you wherever
+              you are, whenever you need us.
+            </p>
 
-        <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl overflow-hidden border border-primary/20 h-96 w-full">
-          <NairobiMap />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {[
-            { region: "Highway Network", coverage: "800+ km" },
-            { region: "Urban Coverage", coverage: "15+ cities" },
-            { region: "Remote Areas", coverage: "24/7 access" },
-          ].map((item, i) => (
-            <div key={i} className="text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-3" />
-              <h3 className="text-lg font-bold text-foreground mb-1">{item.region}</h3>
-              <p className="text-foreground/70">{item.coverage}</p>
+            {/* Coverage Stats */}
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              {[
+                { value: "800+", label: "km Network" },
+                { value: "15+", label: "Urban Areas" },
+                { value: "24/7", label: "Availability" },
+              ].map((item, i) => (
+                <div key={i} className="text-center p-4 rounded-2xl bg-background border border-border">
+                  <div className="text-2xl font-semibold text-accent mb-1">{item.value}</div>
+                  <div className="text-xs text-muted-foreground">{item.label}</div>
+                </div>
+              ))}
             </div>
-          ))}
+
+            {/* Coverage Areas List */}
+            <div className="grid grid-cols-2 gap-3">
+              {coverageAreas.map((area, i) => (
+                <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                  {area}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Map */}
+          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-border">
+            <NairobiMap />
+            {/* Map Overlay Badge */}
+            <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg border border-border">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-accent" />
+                <span className="text-sm font-medium text-foreground">Live Coverage Map</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

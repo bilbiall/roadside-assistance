@@ -1,5 +1,6 @@
 "use client"
-import HeroSection from "@/components/sections/hero-section"
+import Navbar from "@/components/sections/navbar"
+import HeroSlider from "@/components/sections/hero-slider"
 import AboutSection from "@/components/sections/about-section"
 import ServicesSection from "@/components/sections/services-section"
 import WhyChooseSection from "@/components/sections/why-choose-section"
@@ -11,8 +12,9 @@ import Footer from "@/components/sections/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-      <HeroSection />
+    <main className="min-h-screen bg-background overflow-x-hidden">
+      <Navbar />
+      <HeroSlider />
       <AboutSection />
       <ServicesSection />
       <WhyChooseSection />
